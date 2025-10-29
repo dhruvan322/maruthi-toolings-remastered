@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import { Service } from '../../types';
+import { Service } from '../../types.js'; // FIX: added .js extension
 
 const serviceSchema: Schema = new Schema({
   title: { type: String, required: true },
