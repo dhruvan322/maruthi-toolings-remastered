@@ -1,6 +1,4 @@
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL ||
-  'http://localhost:5000'; // fallback for local development
+const API_BASE_URL = 'https://maruthi-toolings-remastered-backend.onrender.com';
 
 export const submitInquiry = async (formData: {
   name: string;
