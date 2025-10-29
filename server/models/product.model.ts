@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import { Product } from '../../types';
+import { Product } from '../../types.js'; // FIX: added .js extension
 
 const productSchema: Schema = new Schema({
   name: { type: String, required: true },
