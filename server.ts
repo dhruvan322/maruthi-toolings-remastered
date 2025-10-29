@@ -48,5 +48,8 @@ const startServer = async () => {
     process.exit(1);
   }
 };
+app.get('/', (req, res) => {
+  res.send('✅ Maruthi Toolings Backend is running successfully!');
+});
 
 startServer();
