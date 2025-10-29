@@ -1,25 +1,28 @@
-import { Inquiry } from '../types';
-
-/**
- * This file acts as the API client for the frontend View.
- * It makes a real HTTP request for the contact form.
- */
-
-const handleResponse = async (response: Response) => {
-    if (!response.ok) {
-        throw new Error(`API request failed with status ${response.status}`);
-    }
-    return response.json();
-};
-
-export const submitInquiry = async (inquiryData: Partial<Inquiry>): Promise<{ message: string }> => {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/inquiry`, {
-
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(inquiryData),
+// src/api/maruthi-toolings.api.ts
+export const submitInquiry = async (formData: {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}) => {
+  try {
+    // ✅ Use your live Render backend URL here
+    const response = await fetch('https://maruthi-toolings-remastered-backend.onrender.com/api/inquiry', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
     });
-    return handleResponse(response);
+
+    if (!response.ok) {
+      throw new Error(`Server error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error submitting inquiry:', error);
+    throw error;
+  }
 };
