@@ -13,7 +13,8 @@ const handleResponse = async (response: Response) => {
 };
 
 export const submitInquiry = async (inquiryData: Partial<Inquiry>): Promise<{ message: string }> => {
-    const response = await fetch(`/api/inquiry`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/inquiry`, {
+
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
