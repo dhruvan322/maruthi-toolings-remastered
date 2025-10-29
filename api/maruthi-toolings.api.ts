@@ -1,4 +1,7 @@
-// src/api/maruthi-toolings.api.ts
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL ||
+  'http://localhost:5000'; // fallback for local development
+
 export const submitInquiry = async (formData: {
   name: string;
   email: string;
@@ -6,8 +9,7 @@ export const submitInquiry = async (formData: {
   message: string;
 }) => {
   try {
-    // ✅ Use your live Render backend URL here
-    const response = await fetch('https://maruthi-toolings-remastered-backend.onrender.com/api/inquiry', {
+    const response = await fetch(`${API_BASE_URL}/api/inquiry`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
