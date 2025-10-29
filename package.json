@@ -35,4 +35,8 @@
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2"
   }
+  "scripts": {
+  "start": "node dist/server.js",
+  "build": "tsc -p tsconfig.server.json"
+}
 }
