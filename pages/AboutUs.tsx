@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const AboutUs: React.FC = () => {
@@ -13,7 +12,7 @@ const AboutUs: React.FC = () => {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <img 
-              src="/images/image_1.jpeg" 
+              src="https://picsum.photos/seed/about/800/600" 
               alt="Intricate injection mould detail showcasing precision engineering"
               className="rounded-lg shadow-xl"
             />
