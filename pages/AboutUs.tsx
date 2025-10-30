@@ -12,7 +12,7 @@ const AboutUs: React.FC = () => {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <img 
-              src="https://www.justdial.com/Hyderabad/Maruthi-Tools-Bala-Nagar/040PXX40-XX40-001224516840-L3J6_BZDET#" 
+              src="https://www.mdpi.com/materials/materials-18-00571/article_deploy/html/images/materials-18-00571-g007-550.jpg" 
               alt="Intricate injection mould detail showcasing precision engineering"
               className="rounded-lg shadow-xl"
             />
