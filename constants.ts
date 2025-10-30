@@ -7,8 +7,8 @@ export const NAV_LINKS_LEFT: Page[] = ['Products', 'End Components', 'Tools & Ma
 export const NAV_LINKS_RIGHT: Page[] = ['Services', 'About Us', 'Contact Us', 'Careers'];
 
 export const BANNER_IMAGES = [
-  '/images/image_2.jpeg',
-  '/images/image_0.jpeg',
-  '/images/image_8.jpeg',
-  '/images/image_13.jpeg',
+  'https://picsum.photos/seed/banner1/1920/1080',
+  'https://picsum.photos/seed/banner2/1920/1080',
+  'https://picsum.photos/seed/banner3/1920/1080',
+  'https://picsum.photos/seed/banner4/1920/1080',
 ];
